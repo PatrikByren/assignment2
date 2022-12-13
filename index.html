@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <header><h1>Patrik's Todo's</h1></header>
+    <form>
+      <div class="select">
+        <select name="categoryTodo" id="categoryTodos" class="category-todo">
+          <option value="inHouse">Hushållssyssla</option>
+          <option value="outHouse">Utomhussyssla</option>
+          <option value="rest">Resten</option>
+        </select>
+      </div>
+      <input type="datetime" class="time-input" placeholder="" />
+      <input
+        type="text"
+        class="todo-input"
+        placeholder="What's ur new todo..."
+      />
+
+      <button class="todo-btn" type="submit">
+        <i class="fas fa-plus-square"></i>
+      </button>
+      <!--<div class="select">
+      <select name="todos" class="filter-todo">
+        <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+      </div>-->
+    </form>
+    <form>
+      <div class="filterDiv">
+        <input
+          type="text"
+          class="filter"
+          id="filterInput"
+          placeholder="Look for something..."
+        />
+        <div>
+          <input
+            type="radio"
+            class="filter_rbclass"
+            name="filter_rb"
+            value="none"
+            id="option-0"
+            checked="true"
+          />
+          <label for="option_0">No filter</label>
+          <input
+            type="radio"
+            class="filter_rbclass"
+            name="filter_rb"
+            value="inHouse"
+            id="option-1"
+          />
+          <label for="option_1">Hushållssyssla</label>
+          <input
+            type="radio"
+            class="filter_rbclass"
+            name="filter_rb"
+            value="outHouse"
+            id="option-2"
+          />
+          <label for="option_2">Utomhussyssla</label>
+          <input
+            type="radio"
+            class="filter_rbclass"
+            name="filter_rb"
+            value="rest"
+            id="option-3"
+          />
+          <label for="option_3">Resten</label>
+        </div>
+      </div>
+    </form>
+    <div class="todo-container">
+      <div class="todo-listHead">
+        <h3 class="todo-listHeadTodo">ToDo</h3>
+        <h3 class="todo-listHeadWhere">Where</h3>
+        <h3 class="todo-listHeadWhen">When</h3>
+      </div>
+      <ul class="todo-list"></ul>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
